@@ -1,0 +1,24 @@
+\begin{tikzpicture}[node distance = 1.5cm,sibling distance=10mm, on grid, auto, every loop/.style={stealth-}]
+    \node (0) [state] at (0,0) {0};
+    \node (1) [state, above of=0] {1};
+    \node (2) [state, above of=1] {2};
+    \node (3) [state, above of=2] {3};
+    \node (4) [state, right of=3] {4};
+    \node (5) [state, right of=4] {5};
+    \node (6) [state, right of=5] {6};
+    \node (7) [state, below of=6] {7};
+    \node (8) [state, below of=7] {8};
+    \node (9) [state, below of=8] {9};
+
+    \path[thick]
+        (0) edge [] node {} (1)
+        (1) edge [] node {} (2)
+        (2) edge [] node {} (3)
+        (3) edge [] node {} (4)
+        (4) edge [] node {} (5)
+        (5) edge [] node {} (6)
+        (6) edge [] node {} (7)
+        (7) edge [] node {} (8)
+        (8) edge [] node {} (9)
+        (9) edge [bend left] node {} (0);
+\end{tikzpicture}
